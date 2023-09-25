@@ -2,7 +2,6 @@ import React from 'react'
 import { useLoaderData, useParams } from 'react-router-dom'
 
 const CareerDetails = () => {
-    const {id} = useParams();
     const career = useLoaderData();
   return (
     <div className="career-details">
