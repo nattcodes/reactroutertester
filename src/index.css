@@ -142,6 +142,7 @@ form label span {
 
 .careers>a:hover p {
     color: rgb(218, 34, 255);
+    transition: .2s ease-in-out;
 }
 
 .careers p {
