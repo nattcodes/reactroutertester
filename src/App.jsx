@@ -20,6 +20,7 @@ import {
   Route,
   RouterProvider 
 } from "react-router-dom";
+import CatchCareerError from "./Pages/CatchCareerError";
 
 
 
@@ -36,7 +37,7 @@ const router = createBrowserRouter(
         <Route path="contact" element={<Contact/>}/>
       </Route>
 
-      <Route path="careers" element={<CareerLayout/>}>
+      <Route path="careers" element={<CareerLayout/>} errorElement={<CatchCareerError/>}>
         <Route 
           index
           element={<Careers/>}
