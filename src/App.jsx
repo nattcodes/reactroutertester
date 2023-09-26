@@ -29,7 +29,7 @@ import CatchCareerError from "./Pages/CatchCareerError";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<RootLayout/>}>
-      <Route index element={<Home/>}/>
+      <Route exact path="/" element={<Home/>}/>
       <Route path="about" element={<About/>}/>
 
       <Route path="help" element={<Help/>}>
