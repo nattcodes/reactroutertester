@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/reactroutertester/static/css/main.2fccbfe3.css",
+    "main.js": "/reactroutertester/static/js/main.34cb42b2.js",
+    "index.html": "/reactroutertester/index.html",
+    "main.2fccbfe3.css.map": "/reactroutertester/static/css/main.2fccbfe3.css.map",
+    "main.34cb42b2.js.map": "/reactroutertester/static/js/main.34cb42b2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2fccbfe3.css",
+    "static/js/main.34cb42b2.js"
+  ]
+}
