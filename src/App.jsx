@@ -29,7 +29,7 @@ import CatchCareerError from "./CatchCareerError";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<RootLayout/>} >
-      <Route path="/" element={<Home/>}/>
+      <Route index element={<Home/>}/>
       <Route path="about" element={<About/>}/>
 
       <Route path="help" element={<Help/>}>
@@ -50,8 +50,9 @@ const router = createBrowserRouter(
         />
       </Route>
     </Route>
-  )
-)
+  ),
+  { basename: "/reactroutertester" }
+);
 
 function App() {
   return (
