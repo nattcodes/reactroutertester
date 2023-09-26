@@ -28,7 +28,7 @@ import CatchCareerError from "./Pages/CatchCareerError";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route element={<RootLayout/>} basename="/reactroutertester">
+    <Route element={<RootLayout/>} >
       <Route exact path="/" element={<Home/>}/>
       <Route path="about" element={<About/>}/>
 
