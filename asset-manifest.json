@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/reactroutertester/static/css/main.2fccbfe3.css",
-    "main.js": "/reactroutertester/static/js/main.fc5f93b6.js",
+    "main.js": "/reactroutertester/static/js/main.b159bfd0.js",
     "index.html": "/reactroutertester/index.html",
     "main.2fccbfe3.css.map": "/reactroutertester/static/css/main.2fccbfe3.css.map",
-    "main.fc5f93b6.js.map": "/reactroutertester/static/js/main.fc5f93b6.js.map"
+    "main.b159bfd0.js.map": "/reactroutertester/static/js/main.b159bfd0.js.map"
   },
   "entrypoints": [
     "static/css/main.2fccbfe3.css",
-    "static/js/main.fc5f93b6.js"
+    "static/js/main.b159bfd0.js"
   ]
 }
