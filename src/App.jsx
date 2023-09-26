@@ -29,24 +29,26 @@ import CatchCareerError from "./CatchCareerError";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<RootLayout/>} >
-      <Route index element={<Home/>}/>
-      <Route path="about" element={<About/>}/>
+      <Route exact index element={<Home/>}/>
+      <Route exact path="about" element={<About/>}/>
 
-      <Route path="help" element={<Help/>}>
-        <Route path="faq" element={<Faq/>}/>
-        <Route path="contact" element={<Contact/>}/>
+      <Route exact path="help" element={<Help/>}>
+        <Route exact path="faq" element={<Faq/>}/>
+        <Route exact path="contact" element={<Contact/>}/>
       </Route>
 
-      <Route path="careers" element={<CareerLayout/>} errorElement={<CatchCareerError/>}>
+      <Route path="careers" element={<CareerLayout/>} errorElement={<CatchCareerError/>} exact>
         <Route 
           index
           element={<Careers/>}
           loader={careerLoader}
+          exact
         />
         <Route 
           path=":id"
           element={<CareerDetails/>}
           loader={careerDetailsParameter}
+          exact
         />
       </Route>
     </Route>
