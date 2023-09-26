@@ -2,7 +2,6 @@ import React from 'react'
 import { useLoaderData, useParams } from 'react-router-dom'
 
 const CareerDetails = () => {
-    const {id} = useParams();
     const career = useLoaderData();
   return (
     <div className="career-details">
@@ -16,21 +15,25 @@ const CareerDetails = () => {
   )
 }
 export const careerDetailsParameter = ({params}) => {
-    const {id} = params;
+  const {id} = params;
 
-    const url = "http://localhost:4000/careers/" + id;
-    const result = 
-    fetch(url)
-    .then((res) =>{ 
-        if(!res.ok){
-           throw Error(' Could Not Find The Career')
-        }else{
-            return res.json();
+  const url = '/apiurl.json';
+  const result = fetch(url , {
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
         }
     })
-    .then((data) => data)
+  .then((res) =>{ 
+      if(!res.ok){
+          throw Error(' Could Not Find The Career')
+      }else{
+          return res.json();
+      }
+  })
+  .then((data) => data.careers[id])
 
-    return result;
+  return result;
 }
 
 

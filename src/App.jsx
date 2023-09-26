@@ -30,14 +30,14 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<RootLayout/>} >
       <Route index element={<Home/>}/>
-      <Route path="reactroutertester/about" element={<About/>}/>
+      <Route path="about" element={<About/>}/>
 
-      <Route path="reactroutertester/help" element={<Help/>}>
-        <Route path="reactroutertester/faq" element={<Faq/>}/>
-        <Route path="reactroutertester/contact" element={<Contact/>}/>
+      <Route path="help" element={<Help/>}>
+        <Route path="faq" element={<Faq/>}/>
+        <Route path="contact" element={<Contact/>}/>
       </Route>
 
-      <Route path="reactroutertester/careers" element={<CareerLayout/>} errorElement={<CatchCareerError/>}>
+      <Route path="careers" element={<CareerLayout/>} errorElement={<CatchCareerError/>}>
         <Route 
           index
           element={<Careers/>}
@@ -50,8 +50,7 @@ const router = createBrowserRouter(
         />
       </Route>
     </Route>
-  ),
-  { basename: "/reactroutertester" }
+  )
 );
 
 function App() {
