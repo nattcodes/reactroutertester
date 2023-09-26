@@ -30,27 +30,28 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<RootLayout/>} >
       <Route index element={<Home/>}/>
-      <Route path="about" element={<About/>}/>
+      <Route path="/reactroutertester/about" element={<About/>}/>
 
-      <Route path="help" element={<Help/>}>
-        <Route path="faq" element={<Faq/>}/>
-        <Route path="contact" element={<Contact/>}/>
+      <Route path="/reactroutertester/help" element={<Help/>}>
+        <Route path="/reactroutertester/help/faq" element={<Faq/>}/>
+        <Route path="/reactroutertester/help/contact" element={<Contact/>}/>
       </Route>
 
-      <Route path="careers" element={<CareerLayout/>} errorElement={<CatchCareerError/>}>
+      <Route path="/reactroutertester/careers" element={<CareerLayout/>} errorElement={<CatchCareerError/>}>
         <Route 
           index
           element={<Careers/>}
           loader={careerLoader}
         />
         <Route 
-          path=":id"
+          path="/reactroutertester/careers/:id"
           element={<CareerDetails/>}
           loader={careerDetailsParameter}
         />
       </Route>
     </Route>
-  )
+  ),
+  {basename : path= "/reactroutertester"}
 );
 
 function App() {
