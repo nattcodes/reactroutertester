@@ -18,7 +18,7 @@ const Careers = () => {
 }
 export const careerLoader = () => {
     const result = 
-    fetch('/apiurl.json', {
+    fetch('apiurl.json', {
         headers : { 
           'Content-Type': 'application/json',
           'Accept': 'application/json'
