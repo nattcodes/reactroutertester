@@ -1,17 +1,17 @@
 import React from "react";
 
 //pages
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Faq from "./Pages/Faq";
-import Contact from "./Pages/Contact";
-import Careers, { careerLoader } from "./Pages/Careers";
-import CareerDetails, { careerDetailsParameter } from "./Pages/CareerDetails";
+import Home from "./Home";
+import About from "./About";
+import Faq from "./Faq";
+import Contact from "./Contact";
+import Careers, { careerLoader } from "./Careers";
+import CareerDetails, { careerDetailsParameter } from "./CareerDetails";
 
 //layout
-import RootLayout from "./Layout/RootLayout";
-import Help from "./Layout/Help";
-import CareerLayout from "./Layout/CareerLayout";
+import RootLayout from "./RootLayout";
+import Help from "./Help";
+import CareerLayout from "./CareerLayout";
 
 //Router
 import { 
@@ -20,7 +20,7 @@ import {
   Route,
   RouterProvider 
 } from "react-router-dom";
-import CatchCareerError from "./Pages/CatchCareerError";
+import CatchCareerError from "./CatchCareerError";
 
 
 
