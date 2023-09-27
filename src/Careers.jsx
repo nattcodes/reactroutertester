@@ -17,6 +17,14 @@ const Careers = () => {
   )
 }
 export const careerLoader = () => {
+
+    // Check if the data is in Local Storage
+  const storedData = localStorage.getItem("careerData");
+  if (storedData) {
+    const data = JSON.parse(storedData);
+    return data.careers;
+  }
+
     const result = 
     fetch('apiurl.json', {
         headers : { 
@@ -31,8 +39,10 @@ export const careerLoader = () => {
             return res.json();
         }
     })
-    .then((data) => data.careers)
-
+    .then((data) => {
+        localStorage.setItem('careerData', JSON.stringify(data));  
+      });
+    
     return result;
 }
 
