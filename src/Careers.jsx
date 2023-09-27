@@ -41,6 +41,7 @@ export const careerLoader = () => {
     })
     .then((data) => {
         localStorage.setItem('careerData', JSON.stringify(data));  
+        return data.careers;
       });
     
     return result;
