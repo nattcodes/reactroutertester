@@ -17,7 +17,7 @@ const CareerDetails = () => {
 export const careerDetailsParameter = ({params}) => {
   const {id} = params;
 
-  const url = '/apiurl.json';
+  const url = 'apiurl.json';
   const result = fetch(url , {
       headers : { 
         'Content-Type': 'application/json',
